@@ -1,0 +1,18 @@
+cassandra:
+ image: spotify/cassandra
+ ports:
+  - "7000:7000"
+  - "9042:9042"
+kafka:
+  image: spotify/kafka
+  ports:
+    - "9092:9092"
+    - "2181:2181"
+  environment:
+   ADVERTISED_HOST: 192.168.99.100
+   DVERTISED_PORT: 9092
+zeppelin:
+ image: jamescross91/zeppelin
+ ports:
+  - "8080:8080"
+  - "8081:8081"
